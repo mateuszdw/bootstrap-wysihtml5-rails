@@ -101,9 +101,17 @@ var bsWysihtml5 = function($, wysihtml5) {
         if(options.toolbar[key]) {
           toolbar.append(templates(key, localeObject, options));
 
-          if(key === 'html') {
-            this.initHtml(toolbar);
-          }
+            if(key === "html") {
+                this.initHtml(toolbar);
+            }
+
+            if(key === "link") {
+                this.initInsertLink(toolbar);
+            }
+
+            if(key === "image") {
+                this.initInsertImage(toolbar);
+            }
 
         }
       }
